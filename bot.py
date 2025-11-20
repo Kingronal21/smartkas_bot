@@ -184,7 +184,7 @@ def daily_reminder(app):
 # --------------------------
 # BOT TOKEN
 # --------------------------
-BOT_TOKEN = os.getenv("8160410726:AAHJ9x0i4SZC4j_JbE6JRJuTr1C1BR-GaOo")
+BOT_TOKEN = os.getenv("8160410726:AAF1LB0jcZX_QyVJiFE1ZQW__Y2CiqxFOVQ")
 
 if not BOT_TOKEN:
     print("❗ ERROR: Set TELEGRAM_BOT_TOKEN di Replit Secrets!")
@@ -207,4 +207,5 @@ keep_alive()
 
 print("🔥 Bot UMKM aktif 24 jam...")
 app.run_polling()
+
 
