@@ -56,12 +56,14 @@ CATEGORY_BUTTONS = [
 # COMMAND: /start
 # --------------------------
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    aw  "Halo! Bot UMKM lengkap siap pakai.\n\n"
-        "Gunakan /add pengeluaran untuk tambah transaksi.\n"
-        "Gunakan /add pemasukan untuk tambah transaksi.\n"
+    await update.message.reply_text(
+        "Halo! Bot UMKM lengkap siap pakai.\n\n"
+        "Gunakan /add pengeluaran <jumlah> untuk tambah pengeluaran.\n"
+        "Gunakan /add pemasukan <jumlah> untuk tambah pemasukan.\n"
         "Gunakan /laporan hari atau /laporan bulan untuk laporan.\n"
         "Gunakan /export untuk export laporan ke Excel."
     )
+
 
 # --------------------------
 # COMMAND: /add
@@ -207,6 +209,7 @@ keep_alive()
 
 print("🔥 Bot UMKM aktif 24 jam...")
 app.run_polling()
+
 
 
 
